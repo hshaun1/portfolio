@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color: #f0e6d2;
+    color: #333;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'VT323', 'Press Start 2P', monospace;
+    letter-spacing: 1px
+}
+
+header {
+    grid-area: header;
+    background-color: #2a3b4c;
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: "logo nav";
+    grid-template-colums: auto 1fr;
+}
