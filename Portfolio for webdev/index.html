@@ -14,45 +14,36 @@
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="logo.png" alt="Logo" class="logo">
         </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <lable for ="nav-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </lable>
         <nav id="nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="videoDemo.html">Video Demo</a></li>
-                <li><a href="sitereport.html">Site Report</a></li>
-            </ul>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="project.html" class="active">Projects</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="videoDemo.html" class="active">Video Demo</a></li>
+                    <li><a href="sitereport.html" class="active">Site Report</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <div class="logo">]
-        <img src="logo.png" alt="logo" class="pixel-logo">
-    </div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <lable for="nav-toggle" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </lable>
-    <nav id="nav">
-        <ul class="nav-menu`">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="project.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="videoDemo.html">Video Demo</a></li>
-            <li><a href="sitereport.html">Site Report</a></li>
-        </ul>
-    </nav>
     <main>
         <section class="hero">
-            <h1>Shaun Hayden Portfolio</h1>
+            <h1 class="name-text">Shaun Hayden Portfolio</h1>
             <p>This is my portfolio where I will be showcasing my previouse work</p>
             <a href="project.html" class="button">See my Projects</a>
         </section>
         <section class="about">
-            <img src="mainImg.jpg" alt="Profile picture">
-            <div class="about-text">
+            <div class="img-container">
+                <img src="mainImg.jpg" alt="Profile picture">
+            </div class="about-text">
                 <h2>Aout Me</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum blanditiis quam odio minus magnam voluptas,
                 distinctio error doloremque optio facilis. Est pariatur voluptas et. Magni reiciendis, commodi harum quam 
