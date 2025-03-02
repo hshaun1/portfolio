@@ -49,10 +49,46 @@ body::before {
 }
 
 
-
 @keyframes scanlines {
     0% {background-position: 0 0; }
     100% {background-position: 0 100%; }
+}
+
+body::after {
+    content: "";
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 16, 16, 0);
+    opacity: 0;
+    z-index: 1001;
+    animation: flicker 5s infinite;
+}
+
+@keyframes flicker {
+    0% {opacity: 0; }
+    5% {opacity: 0.05; }
+    10% {opacity: 0; }
+    15% {opacity: 0; }
+    20% {opacity: 0.05; }
+    25% {opacity: 0; }
+    30% {opacity: 0; }
+    35% {opacity: 0.08; }
+    40% {opacity: 0; }
+    45% {opacity: 0; }
+    50% {opacity: 0.02; }
+    55% {opacity: 0; }
+    60% {opacity: 0.04; }
+    65% {opacity: 0; }
+    70% {opacity: 0; }
+    75% {opacity: 0; }
+    80% {opacity: 0.05; }
+    85% {opacity: 0; }
+    90% {opacity: 0.07; }
+    95% {opacity: 0; }
+    100% {opacity: 0; }
 }
 
 h1, h2 {
