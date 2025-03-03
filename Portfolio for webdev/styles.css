@@ -53,7 +53,7 @@ body::before {
     0% {background-position: 0 0; }
     100% {background-position: 0 100%; }
 }
-
+/*
 body::after {
     content: "";
     position:fixed;
@@ -90,7 +90,7 @@ body::after {
     95% {opacity: 0; }
     100% {opacity: 0; }
 }
-
+*/
 h1, h2 {
     font-family: 'VT323', 'Press Start 2P', monospace;
     letter-spacing: 1px
@@ -105,6 +105,12 @@ header {
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .logo {
@@ -112,7 +118,18 @@ header {
 }
 
 .logo img {
-    height: 50px
+    height: 50px;
+    image-rendering: pixelated;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
+.nav-toggle {
+    display: none;
 }
 
 nav {
@@ -158,6 +175,19 @@ nav a:hover::after {
     width: 100%
 }
 
+.nav a.active {
+    color: var(--accent-color);
+}
+
+nav a.active::after {
+    width: 100%;
+    background-color: var(--accent-color);
+}
+
+.hamburger {
+    display: none;
+}
+
 main {
     grid-area: main;
     display: grid;
@@ -166,6 +196,8 @@ main {
         "about";
     gap: 2rem;
     padding: 2rem;
+    position: relative;
+    z-index: 2;
 
 }
 
