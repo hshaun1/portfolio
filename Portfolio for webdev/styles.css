@@ -91,6 +91,12 @@ body::after {
     100% {opacity: 0; }
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 h1, h2 {
     font-family: 'VT323', 'Press Start 2P', monospace;
     letter-spacing: 1px;
@@ -180,7 +186,7 @@ header {
 nav {
     grid-area: nav;
     display: grid;
-    justify-content: end;
+    justify-content: center;
 }
 
 nav ul {
@@ -398,10 +404,13 @@ main::after {
     border: 3px solid var(--header-bg);
     box-shadow: 5px 5px 0 var(--shadow);
     border-radius: 10px;
+    display: inline-block;
+    max-width: 20rem;
 }
 
 .img-container img {
     width: 100%;
+    max-width: 20rem;
     height: auto;
     display: block;
     transition: transform 0.5s ease;
