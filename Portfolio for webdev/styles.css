@@ -53,7 +53,21 @@ body::before {
     0% {background-position: 0 0; }
     100% {background-position: 0 100%; }
 }
-/*
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 16, 16, 0);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1001;
+    animation: flicker 5s infinite;
+}
+
 body::after {
     content: "";
     position:fixed;
@@ -94,6 +108,51 @@ body::after {
 h1, h2 {
     font-family: 'VT323', 'Press Start 2P', monospace;
     letter-spacing: 1px
+}
+
+.name-text {
+    position: relative;
+    color: var(--text-color);
+    text-shadow: 2px 2px 0 var(--shadow);
+    animation: glitch 3s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% {transform: translate(-2px, 2px); }
+    40% {transform: translate(-2px, -2px); }
+    60% {transform: translate(2px, 2px); }
+    80% {transform: translate(2px, -2px); }
+    100% {transform: translate(0); }
+}
+
+.retro-text {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 0 var(--shadow);
+}
+
+.heading {
+    font-size: 2rem;
+    color: var(--header-bg);
+    text-shadow: 2px 2px 0 var(--shadow);
+    position: relative;
+    display: inline-block;
+}
+
+.heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-color);
+    animation: line-grow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes line-grow {
+    from {width: 0; }
+    to {width: 100%; }
 }
 
 header {
@@ -213,23 +272,17 @@ main::before, main::after {
         var(--accent-color) 10px,
         var(--accent-color) 20px
     );
+    z-index: 1;
 }
 
-.name-text {
-    position: relative;
-    color: var(--text-color);
-    text-shadow: 2px 2px 0 var(--shadow);
-    animation: glitch 3s infinite;
+main::before {
+    top: 0;
 }
 
-@keyframes glitch {
-    0% { transform: translate(0); }
-    20% {transform: translate(-2px, 2px); }
-    40% {transform: translate(-2px, -2px); }
-    60% {transform: translate(2px, 2px); }
-    80% {transform: translate(2px, -2px); }
-    100% {transform: translate(0); }
+main::after {
+    bottom: 0;
 }
+
 
 .hero {
     grid-area: hero;
