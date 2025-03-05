@@ -48,7 +48,6 @@ body::before {
     animation: scanlines 10s linear infinite;
 }
 
-
 @keyframes scanlines {
     0% {background-position: 0 0; }
     100% {background-position: 0 100%; }
@@ -64,19 +63,6 @@ body::after {
     background: rgba(18, 16, 16, 0);
     opacity: 0;
     pointer-events: none;
-    z-index: 1001;
-    animation: flicker 5s infinite;
-}
-
-body::after {
-    content: "";
-    position:fixed;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(18, 16, 16, 0);
-    opacity: 0;
     z-index: 1001;
     animation: flicker 5s infinite;
 }
@@ -104,10 +90,10 @@ body::after {
     95% {opacity: 0; }
     100% {opacity: 0; }
 }
-*/
+
 h1, h2 {
     font-family: 'VT323', 'Press Start 2P', monospace;
-    letter-spacing: 1px
+    letter-spacing: 1px;
 }
 
 .name-text {
@@ -173,7 +159,7 @@ header {
 }
 
 .logo {
-    grid-area: logo
+    grid-area: logo;
 }
 
 .logo img {
@@ -194,7 +180,7 @@ header {
 nav {
     grid-area: nav;
     display: grid;
-    justify-content: END;
+    justify-content: end;
 }
 
 nav ul {
@@ -231,7 +217,7 @@ nav a:hover {
 }
 
 nav a:hover::after {
-    width: 100%
+    width: 100%;
 }
 
 .nav a.active {
@@ -257,7 +243,6 @@ main {
     padding: 2rem;
     position: relative;
     z-index: 2;
-
 }
 
 main::before, main::after {
@@ -282,7 +267,6 @@ main::before {
 main::after {
     bottom: 0;
 }
-
 
 .hero {
     grid-area: hero;
@@ -319,12 +303,11 @@ main::after {
 @keyframes slide-up {
     from {
         opacity: 0;
-        transform: transLateY(20px)
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: transLateY(0);
-
+        transform: translateY(0);
     }
 }
 
@@ -364,7 +347,6 @@ main::after {
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: 8px;
-
 }
 
 .button:hover {
@@ -391,7 +373,7 @@ main::after {
     background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid var(--header-bg);
     box-shadow: 5px 5px 0px var(--header-bg);
-    animation: slide-up 0.8 ease-out 0.2s backwards;
+    animation: slide-up 0.8s ease-out 0.2s backwards;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
@@ -405,52 +387,12 @@ main::after {
     width: 100%;
     height: 100%;
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
-    
-
+    opacity: 0.1;
+    z-index: -1;
 }
-    
-   
-
-.about img {
-    grid-area: img;
-    max-width: 100%;
-}
-
-.about-text {
-    grid-area: text;
-    display: grid;
-    grid-template-areas:
-        "heading"
-        "paragraph";
-    gap: 1rem;
-}
-
-.heading {
-    font-size: 2rem;
-    color: var(--header-bg);
-    text-shadow: 2px 2px 0 var(--shadow);
-    position: relative;
-    display: inline-block;
-}
-
-.heading::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 3px;
-    background-color: var(--accent-color);
-    animation: line-grow 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes line-grow {
-    from {width: 0; }
-    to {width: 100%; }
-}
-
 
 .img-container {
+    grid-area: img;
     position: relative;
     overflow: hidden;
     border: 3px solid var(--header-bg);
@@ -463,6 +405,7 @@ main::after {
     height: auto;
     display: block;
     transition: transform 0.5s ease;
+    image-rendering: auto;
 }
 
 .img-container::after {
@@ -481,8 +424,18 @@ main::after {
     opacity: 1;
 }
 
-.img-container:hover img{
+.img-container:hover img {
     transform: scale(1.05);
+}
+
+.about-text {
+    grid-area: text;
+    display: grid;
+    grid-template-areas:
+        "heading"
+        "paragraph";
+    gap: 1.5rem;
+    align-content: start;
 }
 
 .about h2 {
@@ -573,12 +526,12 @@ footer p {
 
     .about {
         grid-template-areas:
-            "image"
+            "img"
             "text";
         grid-template-columns: 1fr;
     }
 
     .hamburger {
-        display:block;
+        display: block;
     }
 }
