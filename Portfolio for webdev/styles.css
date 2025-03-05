@@ -395,7 +395,7 @@ main::after {
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid var(--header-bg);
-    box-shadow: 5px 5px 0px var(--header-bg);
+    box-shadow: 5px 5px 0px var(--shadow);
     animation: slide-up 0.8s ease-out 0.2s backwards;
     border-radius: 15px;
     position: relative;
