@@ -179,6 +179,23 @@ header {
     filter: drop-shadow(0 0 5px var(--accent-color));
 }
 
+.nav-menu {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+         display: none; 
+        }
+    .hamburger { 
+        display: block; 
+    }
+    .nav-toggle:checked + .hamburger + #nav .nav-menu {
+        display: block;
+    }
+}
+
+
 .nav-toggle {
     display: none;
 }
