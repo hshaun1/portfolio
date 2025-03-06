@@ -11,7 +11,7 @@
 
     .logo {
         justify-self: start;
-        grid-area: hamburger;
+        grid-area: logo;
         cursor: pointer;
     }
 
