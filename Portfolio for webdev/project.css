@@ -1,0 +1,121 @@
+.project-main {
+    display: grid;
+    grid-template-areas:
+        "hero"
+        "featured"
+        "divider"
+        "details";
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.projects-grid {
+    grid-area: featured; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0;
+    animation: slide-up 0.8s ease-out 0.2s backwards
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--header-bg);
+    box-shadow: 5px 5px 0px var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 7px 7px 0px var(--shadow)
+}
+
+.project-img-container {
+    overflow: hidden;
+    position: relative;
+    height: 160px;
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img-container img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.divider-container {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: 1fr;
+    place-items: center;
+}
+
+.divider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.animated-divider {
+    width: 200%;
+    height: 4px;
+    background: linear-gradient(
+        to right, 
+        var(--header-bg) 0%,
+        var(--header-bg) 100%,
+        transparent 50%,
+        transparent 100%
+    );
+    animation: move-line 2s linear infinite;
+}
+
+@keyframes move-line {
+    0%{
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.project-details {
+    grid-area: details;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem
+}
