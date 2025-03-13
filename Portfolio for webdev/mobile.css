@@ -23,6 +23,7 @@
         height: 24px;
         cursor: pointer;
         z-index: 200;
+        grid-area: hamburger;
     }
 
     .hamburger span {
@@ -70,6 +71,42 @@
         text-align: center;
         padding: 0.5rem 1rem;
         width: 100%;
+    }
+
+    /* Project page css for mobile */
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .project-detail-card {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "img"
+            "text";
+        padding: 1.5rem;
+    }
+
+    .project-detail-card:nth-child(even), .project-detail-card:nth-child(odd) {
+        grid-template-areas: 
+            "img"
+            "text";
+    }
+
+    .project-detail-img {
+        height: 200px;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .project-detail-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-detail-tags {
+        flex-wrap: wrap;
     }
 
     main {
