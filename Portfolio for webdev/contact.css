@@ -1,0 +1,66 @@
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.social-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 100%; 
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    flex: 2;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid var(--header-bg);
+    box-shadow: 5px 5px 0px var(--shadow);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    color: var(--header-bg);
+}
+
+.social-item {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid var(--header-bg);
+    box-shadow: 5px 5px 0px var(--shadow);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 7px 7px 0px var(--shadow);
+    background-color: var(--accent-color);
+}
+
+.social-item i {
+    font-size: 1.5rem;
+    color: var(--header-bg);
+}
+
+.social-item:hover i {
+    color: white;
+}
+
+.contact-banner {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid var(--header-bg);
+}
