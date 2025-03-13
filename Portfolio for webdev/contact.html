@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -35,6 +36,69 @@
         </nav>
     </header>
     <div class="container">
+        <main class="content-main">
+            <section class="hero">
+                <h1 class="name-text">Fine me on</h1>
+                <p>You can find or contact me on these sites</p>
+            </section>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h2>Contact Information</h2>
+                        <div class="info-item">
+                            <span class="info-label">Name: </span>
+                            <span class="info-value">Shaun Hayden</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:  </span>
+                            <span class="info-value">hshaun101@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location: </span>
+                            <span class="info-value">Northamption, Uk</span>
+                        </div>
+                        <div class="social-connect">
+                            <h3>Fine me on...</h3>
+                            <div class="social-grid">
+                                <a href="https://github.com/" target="_blank" class="social-button">Github</a>
+                                <a href="https://x.com/" target="_blank" class="social-button">Twitter</a>
+                                <a href="https://linkedin.com/" target="_blank" class="social-button">LinkedIn</a>
+                                <a href="https://instagram.com/" target="_blank" class="social-button">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-from-container">
+                    <div class="form-card">
+                        <h2>Email Me</h2>
+                        <form id="contactForm" action="mailto:hshaun101@gmail.com" method="post" enctype="text/plain">
+                            <div class="from-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="from-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="from-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="from-group">
+                                <label for="message">Message</label>
+                                <textarea type="message" id="message" name="message" rows="6" required></textarea>
+                            </div>
+
+                            <button type="submit" class="button">Send</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
 
     </div>
     <footer>
