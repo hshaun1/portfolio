@@ -198,6 +198,32 @@
     box-shadow: 0 0 5px var(--accent-color);
 }
 
+.form-group input:hover, 
+.form-group textarea:hover {
+    background-color: rgba(255, 255, 255, 0.95)
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-card
+.button {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9rem;
+    color: white;
+    background-color: var(--header-bg);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    box-shadow: 4px 4px 0 var(--shadow);
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
 
 
 
