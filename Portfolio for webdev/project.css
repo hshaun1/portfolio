@@ -77,6 +77,10 @@
     flex-grow: 1;
 }
 
+.project-content .button {
+    margin-top:auto;
+}
+
 .divider-container {
     display: grid;
     height: 5vh;
@@ -91,9 +95,10 @@
     position: relative;
 }
 
-.animated-divider {
+.divider {
     width: 200%;
-    height: 4px;
+    height: 0;
+    border-top: 4px dashed var(--header-bg);
     background: linear-gradient(
         to right, 
         var(--header-bg) 0%,
@@ -101,15 +106,16 @@
         transparent 50%,
         transparent 100%
     );
+    background-size: 200% 100%;
     animation: move-line 2s linear infinite;
 }
 
 @keyframes move-line {
     0%{
-        transform: translateX(-50%);
+        background-position: 0 0;
     }
     100% {
-        transform: translateX(0%);
+        background-position: 100% 0;
     }
 }
 
