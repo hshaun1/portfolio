@@ -45,4 +45,104 @@
 
 .info-item {
     margin-bottom: 1rem;
+    padding: 0.5rem;
 }
+
+.info-label {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    color: var(--header-bg);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.info-value {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.info-value a {
+    position: relative;
+}
+
+.social-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.social-links-contact {
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid var(--header-bg);
+    box-shadow: 5px 5px 0px var(--shadow);
+    border-radius: 10px;
+}
+
+.social-item {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid var(--header-bg);
+    box-shadow: 5px 5px 0px var(--shadow);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3 ease;
+}
+
+.social-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px var(--shadow);
+    background-color: var(--accent-color);
+}
+
+.social-item i {
+    font-size: 1.5rem;
+    color: var(--header-bg);
+}
+
+.social-item:hover i {
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    color: var(--header-bg);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--header-bg);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    font-family: 5px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
