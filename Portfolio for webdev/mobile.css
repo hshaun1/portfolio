@@ -198,3 +198,34 @@
         font-size:1.5rem;
     }
 }
+
+/* contact page for mobile */
+
+@media (max-width: 768px) {
+    .content-main {
+        padding: 1rem;
+    }
+    .hero {
+        padding: 1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    .contact-card,
+    .form-card {
+        padding: 1rem;
+    }
+    .social-row {
+        justify-content: center;
+    }
+    .social-item {
+        width: 40px;
+        height: 40px;
+    }
+    .social-item i {
+        font-size: 1.2rem;
+    }
+}
