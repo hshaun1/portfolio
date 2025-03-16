@@ -16,9 +16,10 @@
 .video-container {
     position: relative;
     width: 80%;
-    max-width: 800px;
+    max-width: flex;
     padding-bottom: 45%;
     height: 0;
+    background-color: white;
     border: 2px soild var(--header-bg);
     box-shadow: 5px 5px 0px var(--shadow);
     border-radius: 15px;
